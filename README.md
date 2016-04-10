@@ -1,7 +1,7 @@
-# FAMJAM! A task and reposibilities management tool for busy families.
+# FAMJAM! 
+A task and reposibilities management tool for busy families.
 
-* See my trello board!
-(trello.com/b/uXURcotB)
+[See my trello board!](trello.com/b/uXURcotB)
 
 ## Summary With FamJam, you will be able to create tasks and assign them to different members in your family.
 
