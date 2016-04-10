@@ -3,7 +3,8 @@ A task and reposibilities management tool for busy families.
 
 [See my trello board!](trello.com/b/uXURcotB)
 
-## Summary With FamJam, you will be able to create tasks and assign them to different members in your family.
+## Summary 
+With FamJam, you will be able to create tasks and assign them to different members in your family.
 
 ## What my MVP will be
 Each user will have tasks, appointments and due dates
