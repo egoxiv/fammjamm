@@ -1,2 +1,50 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<body>
+  <div class="container-fluid">
+
+    <div class="row">
+      <header "col-md-12">
+        <h1 id="header_title" class="muted">FamJam</h1>
+        <p id="byline" class="muted">Family organization, made easy.</p>
+      </header><!-- /header -->
+    </div>
+
+    <div class="row">
+
+      <div class="user col-md-3 col-lg-3">
+        <h2>User info</h2>
+        <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
+        <ul>
+          <li><a href="#">Family Tasks</a></li>
+          <li><a href="#">My Tasks</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="task col-md-5 col-lg-5" id="tasks">
+        <h2>Task list</h2>
+
+        <form action="" method="get">
+          <ul>
+            <li><input name="task" value="" class="task_input"></li>
+            <li><input name="task" value="" class="task_input"></li>
+            <li><input name="task" value="" class="task_input"></li>
+            <li><input name="task" value="" class="task_input"></li>
+            <li><input name="task" value="" class="task_input"></li>
+          </ul>
+          <input type="submit" name="submit" value="Add Task" id="add_task">
+        </form>
+
+      </div>
+
+      <div class="task_detail col-md-4 col-lg-4">
+        <h2>Task detail</h2>
+        <h3>*task_name</h3>
+        <textarea></textarea>
+      </div>
+
+    </div>
+
+  </div>
+</body><!-- /body -->
+
+

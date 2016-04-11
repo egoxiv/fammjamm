@@ -1,3 +1,131 @@
-body {
-  background-color: salmon;
+* {
+  /*box-sizing: border-box;*/
+  margin: 0;
+  padding: 0;
+  color: #eee;
 }
+
+body {
+  background-color: #2980b9;
+}
+
+
+/********************
+Header
+********************/
+
+#header_title {
+  font-size: 5em;
+  margin-top: 0;
+  display: inline-block;
+}
+
+#byline {
+  display: inline-block;
+}
+
+
+/********************
+Columns
+********************/
+
+div {
+  height: 100%;
+}
+
+
+/********************
+Columns
+********************/
+
+#new_task {
+  display: inline-block;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+
+/********************
+Task column
+********************/
+
+#tasks h2 {
+  display: inline-block;
+}
+
+input#add_task {
+  background: none;
+  border: 1px solid lime;
+  font-size: 1em;
+  color: lime;
+  padding: 2px 4px;
+  margin: 20px 0 10px;
+}
+
+#tasks ul {
+  list-style: none;
+}
+
+#tasks ul li {
+  min-width: 100%;
+  border-bottom: 1px solid #eee;
+}
+
+.task_input {
+  min-width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+}
+
+
+/********************
+User column
+********************/
+
+#user_image {
+  display: block;
+  margin: 20px auto;
+}
+
+.user ul {
+  min-width: 100%;
+  list-style: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.user a {
+  display: inline-block;
+  color: #eee;
+  border: 1px solid lime;
+  font-size: 1em;
+  color: lime;
+  margin-bottom: 10px;
+  height: 22px;
+  width: 100px;
+}
+
+
+textarea {
+  min-width:100%;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  color: black;
+  padding: 10px;
+  resize: none;
+  border: none;
+}
+
+/********************
+Colors
+********************/
+
+.muted {
+  color: #eee
+}
+
+
