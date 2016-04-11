@@ -1,5 +1,5 @@
 * {
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #eee;
@@ -33,15 +33,6 @@ div {
   height: 100%;
 }
 
-
-/********************
-Columns
-********************/
-
-#new_task {
-  display: inline-block;
-}
-
 h2 {
   font-size: 2.5em;
 }
@@ -53,15 +44,6 @@ Task column
 
 #tasks h2 {
   display: inline-block;
-}
-
-input#add_task {
-  background: none;
-  border: 1px solid lime;
-  font-size: 1em;
-  color: lime;
-  padding: 2px 4px;
-  margin: 20px 0 10px;
 }
 
 #tasks ul {
@@ -78,6 +60,12 @@ input#add_task {
   background-color: transparent;
   border: none;
   font-size: 1.5em;
+}
+
+.task button {
+  display: inline-block;
+  float: right;
+  margin-top: 25px;
 }
 
 
@@ -97,19 +85,19 @@ User column
   margin-top: 30px;
 }
 
-.user a {
-  display: inline-block;
-  color: #eee;
-  border: 1px solid lime;
-  font-size: 1em;
-  color: lime;
-  margin-bottom: 10px;
-  height: 22px;
+.user ul li {
+  display: block;
   width: 100px;
+  margin: 5px auto;
+}
+
+.user a {
+  color: #eee;
 }
 
 
 textarea {
+  border-radius: 10px;
   min-width:100%;
   height: 150px;
   display: block;

@@ -1,5 +1,5 @@
 <body>
-  <div class="container-fluid">
+  <div class="container">
 
     <div class="row">
       <header "col-md-12">
@@ -14,16 +14,17 @@
         <h2>User info</h2>
         <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
         <ul>
-          <li><a href="#">Family Tasks</a></li>
-          <li><a href="#">My Tasks</a></li>
-          <li><a href="#">Settings</a></li>
+          <li class="btn btn-success btn-sm"><a href="#">Family Tasks</a></li>
+          <li class="btn btn-success btn-sm"><a href="#">My Tasks</a></li>
+          <li class="btn btn-success btn-sm"><a href="#">Settings</a></li>
         </ul>
       </div>
 
       <div class="task col-md-5 col-lg-5" id="tasks">
-        <h2>Task list</h2>
-
         <form action="" method="get">
+          <h2>Task list</h2>
+          <button type="submit" name="task" value="" id="submit_btn" class="btn btn-success btn-sm">Add Task</button>
+          <!-- <input type="submit" name="submit" value="Add Task" id="add_task" class="btn btn-success btn-sm"> -->
           <ul>
             <li><input name="task" value="" class="task_input"></li>
             <li><input name="task" value="" class="task_input"></li>
@@ -31,7 +32,6 @@
             <li><input name="task" value="" class="task_input"></li>
             <li><input name="task" value="" class="task_input"></li>
           </ul>
-          <input type="submit" name="submit" value="Add Task" id="add_task">
         </form>
 
       </div>
