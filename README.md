@@ -2,6 +2,7 @@
 A task and reposibilities management tool for busy families.
 
 [See my trello board!](trello.com/b/uXURcotB)
+
 [Check out FamilyJam on Heroku](http://familyjam.herokuapp.com/)
 
 ## Summary 
