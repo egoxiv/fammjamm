@@ -1,4 +1,4 @@
-* {
+/** {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,14 +7,14 @@
 
 body {
   background-color: #2980b9;
-}
+}*/
 
 
 /********************
 Header
 ********************/
 
-#header_title {
+/*#header_title {
   font-size: 5em;
   margin-top: 0;
   display: inline-block;
@@ -22,27 +22,27 @@ Header
 
 #byline {
   display: inline-block;
-}
+}*/
 
 
 /********************
 Columns
 ********************/
 
-div {
+/*div {
   height: 100%;
 }
 
 h2 {
   font-size: 2.5em;
-}
+}*/
 
 
 /********************
 Task column
 ********************/
 
-#tasks h2 {
+/*#tasks h2 {
   display: inline-block;
 }
 
@@ -66,14 +66,14 @@ Task column
   display: inline-block;
   float: right;
   margin-top: 25px;
-}
+}*/
 
 
 /********************
 User column
 ********************/
 
-#user_image {
+/*#user_image {
   display: block;
   margin: 20px auto;
 }
@@ -106,14 +106,14 @@ textarea {
   padding: 10px;
   resize: none;
   border: none;
-}
+}*/
 
 /********************
 Colors
 ********************/
 
-.muted {
+/*.muted {
   color: #eee
-}
+}*/
 
 

@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Family.destroy_all
 
 families1 = Family.create({
@@ -21,15 +22,17 @@ member1 = Member.create({
   password: "notrealpassword",
   password_confirmation: "notrealpassword",
   first_name: "Erik",
-  last_name: "Gomez"
+  last_name: "Gomez",
+  email: "egoxiv@gmail.com"
 })
 
-member2 = Member.create ({
+member2 = Member.create({
   username: "jimmygoldberg72",
   password: "afakepassword",
   password_confirmation: "afakepassword",
   first_name: "Jimmy",
-  last_name: "Goldberg"
+  last_name: "Goldberg",
+  email: "jimmyg47@yahoo.com"
 })
 
 families1.members.push(member1)
