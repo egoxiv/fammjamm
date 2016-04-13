@@ -1,2 +1,18 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+  <h1>Users#new</h1>
+  <form action="/login" method="post">
+    <input name="first_name" type="text" placeholder="Enter your first name"><br>
+
+    <input name="last_name" type="text" placeholder="Enter your last name"><br>
+
+    <input type="email" name="email" placeholder="Enter your email"><br>
+
+    <input name="username" type="text" placeholder="Choose a username"><br>
+
+    <input name="password" type="password" placeholder="Enter your password"><br>
+
+    <input name="password_confirmation" type="password" placeholder="Confirm your password"><br>
+
+    <button type="submit">Sign up</button>
+  </form>
+</div>

@@ -19,12 +19,7 @@ class UsersController < ApplicationController
     else
       render :new
     end
-  end
-end
 
-# username: "erikgomez89",
-#   password: "notrealpassword",
-#   password_confirmation: "notrealpassword",
-#   first_name: "Erik",
-#   last_name: "Gomez",
-#   email: "egoxiv@gmail.com"
+  end
+
+end
