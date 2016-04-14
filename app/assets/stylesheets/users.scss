@@ -4,19 +4,26 @@
 
 body {
   text-align: center;
+  font-weight: 400;
 }
 
 h1 {
   font-size: 5em;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 a {
   color: white;
-  width: 30%;
+  width: 80%;
+  height: 50px;
+}
+
+.btn {
+  font-size: 1.6em;
 }
 
 .button-container {
-  margin: 50px auto;
+  margin: 10px auto;
 }
