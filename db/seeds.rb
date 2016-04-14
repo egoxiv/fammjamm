@@ -16,7 +16,6 @@ families2 = Family.create({
   family_name: "Golberg"
 })
 
-
 member1 = Member.create({
   username: "erikgomez89",
   password: "notrealpassword",
@@ -44,28 +43,6 @@ member1.tasks.create({
   is_complete: true,
   description: "Need to pick up milk, butter, and rice for dinner today. Groceries were out of stock last time we went."
 })
-
-member1.tasks.create({
-  task: "Task 2",
-  due_date: "1/01/2016",
-  is_complete: true,
-  description: "Need to pick up milk, butter, and rice for dinner today. Groceries were out of stock last time we went."
-})
-
-member1.tasks.create({
-  task: "Task 3",
-  due_date: "1/01/2016",
-  is_complete: true,
-  description: "Need to pick up milk, butter, and rice for dinner today. Groceries were out of stock last time we went."
-})
-
-member1.tasks.create({
-  task: "Task 4",
-  due_date: "1/01/2016",
-  is_complete: true,
-  description: "Need to pick up milk, butter, and rice for dinner today. Groceries were out of stock last time we went."
-})
-
 
 member2.tasks.create({
   task: "Take kids to soccer practice",

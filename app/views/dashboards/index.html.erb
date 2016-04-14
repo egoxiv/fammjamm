@@ -13,13 +13,9 @@
         <h2><%= @current_user.first_name %></h2>
         <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
         <ul>
-          <!-- <li class="btn btn-success btn-sm"><a href="#">Family Tasks</a></li>
-          <li class="btn btn-success btn-sm"><a href="#">My Tasks</a></li>
-          <li class="btn btn-success btn-sm"><a href="#">Settings</a></li> -->
           <li class="btn btn-success btn-sm"><a href="/logout">Logout</a></li>
         </ul>
       </div>
-
 
       <table class="table-hover col-md-9 col-lg-9">
         <caption>Your Tasks</caption>
@@ -41,7 +37,5 @@
       </table>
 
       <%= link_to 'Add a Task!', tasks_new_path %>
-
     </div>
-
   </div>
