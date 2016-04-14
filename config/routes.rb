@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+  get '/tasks/new' => 'dashboards#new'
+
+  post '/tasks' => 'dashboards#create'
+
   #############
 
   get '/login' => 'sessions#new'

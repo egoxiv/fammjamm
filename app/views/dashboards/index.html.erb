@@ -13,31 +13,36 @@
         <h2><%= @current_user.first_name %></h2>
         <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
         <ul>
-          <li class="btn btn-success btn-sm"><a href="#">Family Tasks</a></li>
+          <!-- <li class="btn btn-success btn-sm"><a href="#">Family Tasks</a></li>
           <li class="btn btn-success btn-sm"><a href="#">My Tasks</a></li>
-          <li class="btn btn-success btn-sm"><a href="#">Settings</a></li>
+          <li class="btn btn-success btn-sm"><a href="#">Settings</a></li> -->
           <li class="btn btn-success btn-sm"><a href="/logout">Logout</a></li>
         </ul>
       </div>
 
       <div class="task col-md-5 col-lg-5" id="tasks">
-        <form action="" method="get">
+        <form action="/tasks/new" method="get">
           <h2>Task list</h2>
-          <button type="submit" name="task" value="" id="submit_btn" class="btn btn-success btn-sm">Add Task</button>
+          <button class="btn btn-success btn-sm">Add a task</button>
+          <!-- When user clicks on 'add a task', I want a modal window to pop up so the user can enter a new task, and add a to that description. When the user hits save, the new task title will be added to the users task list and the description will be in the task detail textarea.  -->
           <ul>
-            <% @current_user.tasks.each do |task| %>
-            <li><input name="task" value="<%= task.task %>" class="task_input" id="input_1"></li>
-<!--             <li><input name="task" value="here is input 2" class="task_input" id="input_2"></li>
+            <% @current_user.tasks.each do | task | %>
+            <li>
+              <input name="task" value="<%= task.task %>" class="task_input" id="input_1">
+              <button class="btn btn-success btn-sm">Edit</button>
+              <button class="btn btn-success btn-sm">Delete</button>
+            </li>
+            <!-- <li><input name="task" value="here is input 2" class="task_input" id="input_2"></li>
             <li><input name="task" value="here is input 3" class="task_input" id="input_3"></li>
             <li><input name="task" value="here is input 4" class="task_input" id="input_4"></li>
             <li><input name="task" value="here is input 5" class="task_input" id="input_5"></li> -->
             <% end %>
+            <!-- Create a todo -->
+            <!-- Delete a todo -->
+            <!-- Edit a todo -->
             <!-- need to create a list of the current users tasks and append them as the value in the inputs -->
-          <!-- need to allow current user to create new tasks and add them to model/table when user clicks out of input (or save tasks) -->
-          <!-- need to add task description in textarea on task detail section -->
           </ul>
         </form>
-
       </div>
 
       <div class="task_detail col-md-4 col-lg-4">
