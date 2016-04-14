@@ -34,10 +34,13 @@
             <tr>
               <td><%= render 'edit_task', :task => task %></td>
               <td><%= render 'edit_desc', :task => task %></td>
+              <td><%= link_to 'Delete', task_path(task), method: :delete, data: {confirm: 'Are you sure?'} %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
+
+      <%= link_to 'Add a Task!', tasks_new_path %>
 
     </div>
 

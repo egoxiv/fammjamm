@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   patch '/tasks/:id' => 'dashboards#update'
 
+  delete '/tasks/:id' => 'dashboards#destroy'
+
   #############
 
   get '/login' => 'sessions#new'
