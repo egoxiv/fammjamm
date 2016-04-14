@@ -10,12 +10,13 @@
     <div class="row">
 
       <div class="user col-md-3 col-lg-3">
-        <h2>*member.username</h2>
+        <h2><%= @current_user.first_name %></h2>
         <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
         <ul>
           <li class="btn btn-success btn-sm"><a href="#">Family Tasks</a></li>
           <li class="btn btn-success btn-sm"><a href="#">My Tasks</a></li>
           <li class="btn btn-success btn-sm"><a href="#">Settings</a></li>
+          <li class="btn btn-success btn-sm"><a href="/logout">Logout</a></li>
         </ul>
       </div>
 
@@ -24,20 +25,28 @@
           <h2>Task list</h2>
           <button type="submit" name="task" value="" id="submit_btn" class="btn btn-success btn-sm">Add Task</button>
           <ul>
-            <li><input name="task" value="here is input 1" class="task_input" id="input_1"></li>
-            <li><input name="task" value="here is input 2" class="task_input" id="input_2"></li>
+            <% @current_user.tasks.each do |task| %>
+            <li><input name="task" value="<%= task.task %>" class="task_input" id="input_1"></li>
+<!--             <li><input name="task" value="here is input 2" class="task_input" id="input_2"></li>
             <li><input name="task" value="here is input 3" class="task_input" id="input_3"></li>
             <li><input name="task" value="here is input 4" class="task_input" id="input_4"></li>
-            <li><input name="task" value="here is input 5" class="task_input" id="input_5"></li>
+            <li><input name="task" value="here is input 5" class="task_input" id="input_5"></li> -->
+            <% end %>
+            <!-- need to create a list of the current users tasks and append them as the value in the inputs -->
+          <!-- need to allow current user to create new tasks and add them to model/table when user clicks out of input (or save tasks) -->
+          <!-- need to add task description in textarea on task detail section -->
           </ul>
         </form>
 
       </div>
 
       <div class="task_detail col-md-4 col-lg-4">
-        <h2>Tasks</h2>
+        <h2>Task Detail</h2>
         <h3 id="task_title">*tasks.task</h3>
-        <textarea>tasks.description</textarea>
+        <% @current_user.tasks.each do |task| %>
+          <textarea><%= task.description %></textarea>
+        <% end %>
+        <!-- need to put the current task titles description inside textarea -->
       </div>
 
     </div>

@@ -5,9 +5,7 @@ Rails.application.routes.draw do
 
   get 'dashboards/show'
 
-  root 'users#index'
-
-  get 'users/new'
+  root 'members#index'
 
   get 'sessions/new'
 
@@ -17,9 +15,11 @@ Rails.application.routes.draw do
 
   post '/login' => 'sessions#create'
 
-  get '/signup' => 'users#new'
+  get '/logout' => 'sessions#destroy'
 
-  post '/signup' => 'users#create'
+  get '/signup' => 'members#new'
+
+  post '/signup' => 'members#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -3,28 +3,16 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = Member.new({
+    member = Member.find_by({
       email: params[:email]
     })
 
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to '/'
+    if member && member.authenticate(params[:password])
+      session[:user_id] = member.id
+      redirect_to '/dashboard'
     else
       render :new
     end
-
-    # @bean = Bean.new(bean_params)
-
-    # if @bean.save
-    #   redirect_to bean_path(@bean)
-    # else
-    #   render :new
-    # end
-
-    # def bean_params
-    #   params.require(:bean).permit(:name, :roast, :origin, :quantity)
-    # end
   end
 
   def destroy
