@@ -20,35 +20,24 @@
         </ul>
       </div>
 
-      <div class="task col-md-5 col-lg-5" id="tasks">
-          <h2>Task list</h2>
-          <button class="btn btn-success btn-sm">Add a task</button>
-          <!-- When user clicks on 'add a task', I want a modal window to pop up so the user can enter a new task, and add a to that description. When the user hits save, the new task title will be added to the users task list and the description will be in the task detail textarea.  -->
-          <ul>
-            <% @current_user.tasks.each do | task | %>
-            <li>
-              <%= render 'edit_task', :task => task %>
-            </li>
-            <!-- <li><input name="task" value="here is input 2" class="task_input" id="input_2"></li>
-            <li><input name="task" value="here is input 3" class="task_input" id="input_3"></li>
-            <li><input name="task" value="here is input 4" class="task_input" id="input_4"></li>
-            <li><input name="task" value="here is input 5" class="task_input" id="input_5"></li> -->
-            <% end %>
-            <!-- Create a todo -->
-            <!-- Delete a todo -->
-            <!-- Edit a todo -->
-            <!-- need to create a list of the current users tasks and append them as the value in the inputs -->
-          </ul>
-      </div>
 
-      <div class="task_detail col-md-4 col-lg-4">
-        <h2>Task Detail</h2>
-        <h3 id="task_title">*tasks.task</h3>
-        <% @current_user.tasks.each do |task| %>
-          <%= render 'edit_desc', :task => task %>
-        <% end %>
-        <!-- need to put the current task titles description inside textarea -->
-      </div>
+      <table class="table-hover col-md-9 col-lg-9">
+        <caption>Your Tasks</caption>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @current_user.tasks.each do | task | %>
+            <tr>
+              <td><%= render 'edit_task', :task => task %></td>
+              <td><%= render 'edit_desc', :task => task %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
     </div>
 
