@@ -20,6 +20,21 @@ class DashboardsController < ApplicationController
   def show
   end
 
+  def edit_task
+  end
+
+  def edit_desc
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    if @task.update_attributes(task_params)
+      redirect_to '/dashboard'
+    else
+      render :edit
+    end
+  end
+
 
 private
   def task_params

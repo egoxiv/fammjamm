@@ -13,6 +13,14 @@ Rails.application.routes.draw do
 
   post '/tasks' => 'dashboards#create'
 
+  get '/tasks/:id' => 'dashboards#show', as: :task
+
+  get '/tasks/:id/edit' => 'dashboards#edit_task'
+
+  get '/tasks/:id/edit' => 'dashboards#edit_desc'
+
+  patch '/tasks/:id' => 'dashboards#update'
+
   #############
 
   get '/login' => 'sessions#new'
