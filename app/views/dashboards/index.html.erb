@@ -1,41 +1,42 @@
-<div class="container">
+<div class="container dashboard">
+    <ul class="nav nav-pills pull-right">
+      <li><%= link_to 'Logout', logout_path %></li>
+    </ul>
 
     <div class="row">
       <header "col-md-12">
-        <h1 id="header_title" class="muted">FamJam</h1>
-        <p id="byline" class="muted">Family organization, made easy.</p>
+        <h1 id="header_title">FamJam</h1>
+        <p id="byline">Organization, made easy.</p>
       </header><!-- /header -->
     </div>
 
     <div class="row">
 
-      <div class="user col-md-3 col-lg-3">
-        <h2><%= @current_user.first_name %></h2>
+      <div class="user col-xs-12 col-md-3 col-lg-3">
         <img id="user_image" src="https://www.fillmurray.com/150/150" alt="Picture of Bill Murray">
-        <ul>
-          <li class="btn btn-success btn-sm"><a href="/logout">Logout</a></li>
-        </ul>
+        <h2><%= @current_user.first_name + ' ' + @current_user.last_name %></h2>
+        <%# link_to 'Logout', logout_path, { :class => 'col-xs-6 btn btn-success btn-sm' } %>
       </div>
 
-      <table class="table-hover col-md-9 col-lg-9">
-        <caption>Your Tasks</caption>
-        <thead>
-          <tr>
-            <th>Task</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @current_user.tasks.each do | task | %>
-            <tr>
-              <td><%= render 'edit_task', :task => task %></td>
-              <td><%= render 'edit_desc', :task => task %></td>
-              <td><%= link_to 'Delete', task_path(task), method: :delete, data: {confirm: 'Are you sure?'} %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
-      <%= link_to 'Add a Task!', tasks_new_path %>
+        <div class="table-responsive">
+          <table class="table col-xs-12 col-md-9 col-lg-9">
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @current_user.tasks.each do | task | %>
+                <tr>
+                  <td><%= render 'edit_task', :task => task %></td>
+                  <td><%= render 'edit_desc', :task => task %></td>
+                  <td class="btn btn-danger"><%= link_to 'Delete', task_path(task), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <%= link_to 'Add a Task', tasks_new_path, { :class => 'add-task col-xs-6 btn btn-success btn-sm' } %>
     </div>
   </div>

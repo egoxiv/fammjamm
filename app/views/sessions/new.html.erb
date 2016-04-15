@@ -1,13 +1,11 @@
 <div class="container login">
   <h1>Login</h1>
 
-  <form action="/login" method="post">
-    <label>Email</label>
-    <input name="email" type="email">
-
-    <label>Password</label>
-    <input name="password" type="password">
-
-    <button>Login</button>
-  </form>
+  <div class="row">
+    <form action="/login" method="post">
+      <input name="email" type="email" placeholder="Email"><br>
+      <input name="password" type="password" placeholder="Password"><br>
+      <button class="btn btn-success">Login</button>
+    </form>
+  </div>
 </div>

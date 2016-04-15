@@ -1,4 +1,6 @@
 class DashboardsController < ApplicationController
+  before_action :login_req, only: [:index, :new, :create]
+
   def index
     @current_user = Member.find(session[:user_id])
   end
@@ -45,5 +47,14 @@ private
   def task_params
     params.require(:task).permit(:task, :description, :user_id)
   end
+
+  def login_req
+    if session[:user_id]
+
+    else
+      redirect_to login_path
+    end
+  end
+
 
 end

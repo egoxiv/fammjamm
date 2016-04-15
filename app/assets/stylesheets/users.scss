@@ -2,10 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 // index styles
 
 body {
-  text-align: center;
+  // text-align: center;
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -13,18 +14,18 @@ body {
 h1 {
   font-size: 5em;
   color: white;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   font-weight: 700;
 }
 
 a {
   color: white;
-  width: 80%;
-  height: 50px;
+  // width: 80%; // fix this!!! styled this way because need to use more room in login and sign up pages, but its too big for dashboard page
+  // height: 50px; // fix this!!!
 }
 
 .btn {
-  font-size: 1.6em;
+  // font-size: 1.6em; // fix this!!!
 }
 
 .button-container {
@@ -40,7 +41,8 @@ a {
   text-align: center;
 }
 
-.new-user input {
+.new-user input,
+.login input {
   background-color: transparent;
   border: none;
   height: 50px;
@@ -52,7 +54,8 @@ a {
   text-align: center;
 }
 
-.new-user ::-webkit-input-placeholder {
+.new-user ::-webkit-input-placeholder,
+.login ::-webkit-input-placeholder {
    color: rgba(255, 255, 255, 0.4);
    font-weight: 300
 }
@@ -64,4 +67,6 @@ a {
 
 // login styles
 
-
+.login input {
+  width: 50%;
+}

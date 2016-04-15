@@ -1,3 +1,54 @@
 // Place all the styles related to the Dashboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body .dashboard {
+  color: white;
+}
+
+// .dashboard h2 {
+//   color: white;
+// }
+
+table {
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+}
+
+#header_title {
+  display: inline-block;
+}
+
+#byline {
+  display: inline-block;
+}
+
+.dashboard img {
+  text-align: center;
+  // float: left;
+}
+
+.user {
+  text-align: center;
+  // margin: 0 auto;
+}
+
+.add-task {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 300;
+  width: 100%;
+}
+
+.dashboard input {
+  background-color: transparent;
+  border: none;
+}
+
+.dashboard textarea {
+  background-color: transparent;
+  border: none;
+  height: 100px;
+  resize: none;
+}
