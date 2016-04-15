@@ -1,18 +1,26 @@
-<div class="container">
-  <h1>Users#new</h1>
-  <form action="/signup" method="post">
-    <input name="first_name" type="text" placeholder="Enter your first name"><br>
+<div class="container new-user">
+  <h1>Signup</h1>
+  <div class="row">
+    <form action="/signup" method="post">
+      <div class="row">
+        <input class="col-xs-12 col-md-6" name="first_name" type="text" placeholder="Enter your first name">
 
-    <input name="last_name" type="text" placeholder="Enter your last name"><br>
+        <input class="col-xs-12 col-md-6" name="last_name" type="text" placeholder="Enter your last name">
+      </div>
 
-    <input type="email" name="email" placeholder="Enter your email"><br>
+      <div class="row">
+        <input class="col-xs-12 col-md-6" type="email" name="email" placeholder="Enter your email">
 
-    <input name="username" type="text" placeholder="Choose a username"><br>
+        <input class="col-xs-12 col-md-6" name="username" type="text" placeholder="Choose a username">
+      </div>
 
-    <input name="password" type="password" placeholder="Enter your password"><br>
+      <div class="row">
+        <input class="col-xs-12 col-md-6" name="password" type="password" placeholder="Enter your password">
 
-    <input name="password_confirmation" type="password" placeholder="Confirm your password"><br>
+        <input class="col-xs-12 col-md-6" name="password_confirmation" type="password" placeholder="Confirm password">
+      </div>
 
-    <button type="submit">Sign up</button>
-  </form>
+      <button type="submit" class="button-signup btn btn-success">Sign up</button>
+    </form>
+  </div>
 </div>
