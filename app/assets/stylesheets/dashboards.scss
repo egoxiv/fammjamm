@@ -2,13 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+header {
+  margin: 0 auto 30px;
+}
+
 body .dashboard {
   color: white;
 }
 
-// .dashboard h2 {
-//   color: white;
-// }
+.dashboard a {
+  color: white;
+}
+
+.dashboard h1 {
+  font-size: 6em;
+  font-weight: 700;
+}
 
 table {
   background-color: transparent;
@@ -41,14 +50,28 @@ table {
   width: 100%;
 }
 
-.dashboard input {
-  background-color: transparent;
+.dashboard input:not(.edit) {
+  color: black;
+  border-radius: 5px;
   border: none;
+  padding: 5px;
 }
 
 .dashboard textarea {
-  background-color: transparent;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
   border: none;
   height: 100px;
+  width: 200px;
   resize: none;
+  padding: 10px;
+}
+
+.edit .btn {
+  color: white
+}
+
+.desc-edit {
+  margin-bottom: 20px;
 }

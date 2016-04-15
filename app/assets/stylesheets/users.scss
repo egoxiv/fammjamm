@@ -6,30 +6,55 @@
 // index styles
 
 body {
-  // text-align: center;
   font-weight: 400;
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 5em;
+.controls h1,
+.new-user h1,
+.login h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 12em;
   color: white;
-  // margin-bottom: 50px;
   font-weight: 700;
 }
 
-a {
+.controls li {
+  margin: 0;
+  display: inline-block;
+}
+
+.controls a {
   color: white;
-  // width: 80%; // fix this!!! styled this way because need to use more room in login and sign up pages, but its too big for dashboard page
-  // height: 50px; // fix this!!!
 }
 
-.btn {
-  // font-size: 1.6em; // fix this!!!
+.controls a:hover {
+  background-color: #5cb85c;
 }
 
-.button-container {
-  margin: 10px auto;
+@media screen and (max-width: 750px) {
+ .controls h1,
+ .new-user h1,
+ .login h1 {
+    font-size: 10em;
+  }
+}
+
+@media screen and (max-width: 610px) {
+ .controls h1,
+ .new-user h1,
+ .login h1 {
+    font-size: 8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+ .controls h1,
+ .new-user h1,
+ .login h1 {
+    font-size: 5em;
+  }
 }
 
 
